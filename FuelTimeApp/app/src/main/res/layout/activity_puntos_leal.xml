@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Puntos_Leal">
+
+    <ImageView
+        android:id="@+id/imvLeal"
+        android:layout_width="85dp"
+        android:layout_height="89dp"
+        android:layout_gravity="left"
+        android:layout_marginLeft="18dp"
+        android:layout_marginTop="19dp"
+        app:srcCompat="@drawable/leal" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tvInfoUsu"
+            android:layout_width="154dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="44dp"
+            android:text="Información del Usuario"
+            android:textColor="#201DB6"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            tools:layout_marginTop="68dp" />
+
+        <ImageView
+            android:id="@+id/imvUsuLeal"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginTop="50dp"
+            android:layout_marginRight="21dp"
+            android:layout_weight="1"
+            app:srcCompat="@drawable/perfil" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tvInfoPuntosLeal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="44dp"
+        android:layout_marginTop="121dp"
+        android:layout_marginRight="49dp"
+        android:text="Puntos:  300 puntos"
+        android:textColor="#201DB6"
+        android:textSize="24sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tvInfoPuntosLeal2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="31dp"
+        android:layout_marginTop="67dp"
+        android:layout_marginRight="37dp"
+        android:text="Más Información a Mostrar Aquí"
+        android:textAlignment="center"
+        android:textColor="#201DB6"
+        android:textSize="24sp"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/btnConectarLeal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="69dp"
+        android:layout_marginTop="35dp"
+        android:layout_marginRight="70dp"
+        android:backgroundTint="#FCD200"
+        android:text="Conectar Con Leal" />
+
+</LinearLayout>
