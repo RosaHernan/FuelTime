@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="364dp"
+        android:layout_height="697dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="16dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/ivMenu"
+                android:layout_width="52dp"
+                android:layout_height="47dp"
+                app:srcCompat="@drawable/menu_black"
+                tools:layout_editor_absoluteX="305dp"
+                tools:layout_editor_absoluteY="35dp" />
+
+            <ImageView
+                android:id="@+id/ivUser"
+                android:layout_width="114dp"
+                android:layout_height="93dp"
+                app:srcCompat="@drawable/perfil"
+                tools:layout_editor_absoluteX="46dp"
+                tools:layout_editor_absoluteY="97dp" />
+
+            <TextView
+                android:id="@+id/textView6"
+                android:layout_width="117dp"
+                android:layout_height="64dp"
+                android:text="Juan Ernesto"
+                android:textColor="#0450A2"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                tools:layout_editor_absoluteX="187dp"
+                tools:layout_editor_absoluteY="126dp" />
+
+            <Button
+                android:id="@+id/button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="#0450A3"
+                android:text="Editar Foto"
+                android:textAllCaps="false"
+                app:layout_constraintEnd_toEndOf="@+id/ivUser"
+                app:layout_constraintStart_toStartOf="@+id/ivUser"
+                app:layout_constraintTop_toBottomOf="@+id/ivUser" />
+
+            <TextView
+                android:id="@+id/tvNombre"
+                android:layout_width="59dp"
+                android:layout_height="27dp"
+                android:text="Nombres"
+                android:textColor="#172573"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.147"
+                app:layout_constraintStart_toStartOf="parent"
+                tools:layout_editor_absoluteY="279dp" />
+
+            <EditText
+                android:id="@+id/edtNombres"
+                android:layout_width="202dp"
+                android:layout_height="26dp"
+                android:ems="10"
+                android:hint="Nombres"
+                android:inputType="textPersonName"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.79"
+                app:layout_constraintStart_toStartOf="parent"
+                tools:layout_editor_absoluteY="280dp" />
+
+            <TextView
+                android:id="@+id/tvApellidos"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Apellidos"
+                android:textColor="#172573"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="@+id/tvNombre"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/tvNombre"
+                app:layout_constraintTop_toBottomOf="@+id/tvNombre" />
+
+            <EditText
+                android:id="@+id/edtApellidos"
+                android:layout_width="202dp"
+                android:layout_height="20dp"
+                android:ems="10"
+                android:hint="Apellidos"
+                android:inputType="textPersonName"
+                app:layout_constraintEnd_toEndOf="@+id/edtNombres"
+                app:layout_constraintStart_toStartOf="@+id/edtNombres"
+                tools:layout_editor_absoluteY="321dp" />
+
+            <TextView
+                android:id="@+id/tvUser"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="Usuario"
+                android:textColor="#172573"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="@+id/tvApellidos"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/tvApellidos"
+                app:layout_constraintTop_toBottomOf="@+id/tvApellidos" />
+
+            <EditText
+                android:id="@+id/edtUser"
+                android:layout_width="202dp"
+                android:layout_height="18dp"
+                android:ems="10"
+                android:hint="Usuario"
+                android:inputType="textEmailAddress"
+                app:layout_constraintEnd_toEndOf="@+id/edtApellidos"
+                app:layout_constraintStart_toStartOf="@+id/edtApellidos"
+                tools:layout_editor_absoluteY="362dp" />
+
+            <TextView
+                android:id="@+id/tvMasInfo"
+                android:layout_width="216dp"
+                android:layout_height="32dp"
+                android:text="Más información aqui"
+                android:textAlignment="center"
+                android:textColor="#172573"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                tools:layout_editor_absoluteY="428dp" />
+
+            <Button
+                android:id="@+id/btnActualizaDatos"
+                android:layout_width="214dp"
+                android:layout_height="51dp"
+                android:layout_marginTop="16dp"
+                android:backgroundTint="#319A35"
+                android:capitalize="characters"
+                android:text="Actualizar Datos"
+                android:textAllCaps="false"
+                app:layout_constraintEnd_toEndOf="@+id/tvMasInfo"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="@+id/tvMasInfo"
+                app:layout_constraintTop_toBottomOf="@+id/tvMasInfo" />
+
+            <Button
+                android:id="@+id/btnCerrarSesion"
+                android:layout_width="201dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="88dp"
+                android:backgroundTint="#C10E0E"
+                android:text="Cerrar Sesión"
+                android:textAllCaps="false"
+                app:layout_constraintEnd_toEndOf="@+id/btnActualizaDatos"
+                app:layout_constraintHorizontal_bias="0.491"
+                app:layout_constraintStart_toStartOf="@+id/btnActualizaDatos"
+                app:layout_constraintTop_toBottomOf="@+id/btnActualizaDatos" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
