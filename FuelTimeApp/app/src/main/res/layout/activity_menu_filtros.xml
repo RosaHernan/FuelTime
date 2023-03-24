@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+             android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0">
+
+        <TextView
+            android:id="@+id/tvtfiltro"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Filtros"
+            android:textAlignment="center"
+            android:textColor="#3F51B5"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tvGasolineraFiltro"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Gasolineras"
+            android:textColor="#2D44C5"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <Spinner
+            android:id="@+id/spnGasolinera"
+            tools:listheader="Seleccione La Gasolinera"
+            tools:listitem="@android:layout/activity_list_item"
+            android:layout_width="match_parent"
+            android:layout_height="37dp"
+            android:layout_marginBottom="19dp" />
+
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <TextView
+                android:id="@+id/txtDias"
+                android:layout_width="match_parent"
+                android:layout_height="32dp"
+                android:text="Dias de Atencion"
+                android:textColor="#2A40BA"
+                android:textStyle="bold" />
+
+            <RadioButton
+                android:id="@+id/btnLunes"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:text="Lunes" />
+
+            <RadioButton
+                android:id="@+id/btnMartes"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:text="Martes" />
+
+            <RadioButton
+                android:id="@+id/btnMiercoles"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:text="Miercoles" />
+
+            <RadioButton
+                android:id="@+id/btnJueves"
+                android:layout_width="match_parent"
+                android:layout_height="32dp"
+                android:text="Jueves" />
+
+            <RadioButton
+                android:id="@+id/btnViernes"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:text="Viernes" />
+
+            <RadioButton
+                android:id="@+id/btnSabado"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:text="Sabado" />
+
+            <RadioButton
+                android:id="@+id/btnDomingo"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:text="Domingo" />
+
+        </RadioGroup>
+
+        <TextView
+            android:id="@+id/txtHorario"
+            android:layout_width="match_parent"
+            android:layout_height="42dp"
+            android:layout_marginTop="5dp"
+            android:text="Horario de Atencion"
+            android:textAlignment="center"
+            android:textColor="#2E40A5"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <SeekBar
+            android:id="@+id/sbHorarios"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <Button
+            android:id="@+id/btnFiltrar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="36dp"
+            android:backgroundTint="#DAFFEB3B"
+            android:text="Filtrar" />
+
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
