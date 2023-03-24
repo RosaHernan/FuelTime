@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="366dp"
+        android:layout_height="681dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="16dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/ivMenu"
+                android:layout_width="33dp"
+                android:layout_height="37dp"
+                app:srcCompat="@drawable/menu_black"
+                tools:layout_editor_absoluteX="326dp"
+                tools:layout_editor_absoluteY="31dp" />
+
+            <TextView
+                android:id="@+id/tvTitulo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Recuperar Contraseña"
+                android:textColor="#0450A3"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.502"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.141" />
+
+            <TextView
+                android:id="@+id/tvUsuarioR"
+                android:layout_width="61dp"
+                android:layout_height="20dp"
+                android:layout_marginTop="48dp"
+                android:text="Usuario:"
+                android:textColor="#0450A3"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/tvTitulo"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/tvTitulo"
+                app:layout_constraintTop_toBottomOf="@+id/tvTitulo"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <EditText
+                android:id="@+id/edtEmailUser"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginBottom="476dp"
+                android:ems="10"
+                android:inputType="textEmailAddress"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toEndOf="@+id/tvUsuarioR" />
+
+            <Button
+                android:id="@+id/btnVerificarUsuario"
+                android:layout_width="200dp"
+                android:layout_height="46dp"
+                android:backgroundTint="#0450A3"
+                android:text="Verificar Usuario"
+                android:textAllCaps="false"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/edtEmailUser"
+                app:layout_constraintVertical_bias="0.084" />
+
+            <TextView
+                android:id="@+id/tvNuevaContrasenia"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Nueva Contraseña"
+                android:textColor="#0450A3"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvUsuarioR"
+                app:layout_constraintVertical_bias="0.295"
+                tools:layout_editor_absoluteX="16dp" />
+
+            <TextView
+                android:id="@+id/tvRepetirContrasenia"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Repetir Contraseña"
+                android:textColor="#0450A3"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvNuevaContrasenia"
+                app:layout_constraintVertical_bias="0.08"
+                tools:layout_editor_absoluteX="11dp" />
+
+            <EditText
+                android:id="@+id/edtNuevaContra"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="textPassword"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/btnVerificarUsuario"
+                app:layout_constraintVertical_bias="0.083"
+                tools:layout_editor_absoluteX="140dp" />
+
+            <EditText
+                android:id="@+id/edtRepetirContra"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="textPassword"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/edtNuevaContra"
+                app:layout_constraintVertical_bias="0.0"
+                tools:layout_editor_absoluteX="140dp" />
+
+            <Button
+                android:id="@+id/btnActualizar"
+                android:layout_width="194dp"
+                android:layout_height="36dp"
+                android:backgroundTint="#319A35"
+                android:text="Actualizar"
+                android:textAllCaps="false"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/edtRepetirContra"
+                app:layout_constraintVertical_bias="0.204"
+                tools:layout_editor_absoluteX="82dp" />
+
+            <Button
+                android:id="@+id/btnRegresar"
+                android:layout_width="186dp"
+                android:layout_height="42dp"
+                android:backgroundTint="#C10E0E"
+                android:text="Regresar"
+                android:textAllCaps="false"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/btnActualizar"
+                app:layout_constraintVertical_bias="0.725"
+                tools:layout_editor_absoluteX="86dp" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
