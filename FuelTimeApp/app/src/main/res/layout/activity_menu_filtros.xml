@@ -39,8 +39,6 @@
 
         <Spinner
             android:id="@+id/spnGasolinera"
-            tools:listheader="Seleccione La Gasolinera"
-            tools:listitem="@android:layout/activity_list_item"
             android:layout_width="match_parent"
             android:layout_height="37dp"
             android:layout_marginBottom="19dp" />

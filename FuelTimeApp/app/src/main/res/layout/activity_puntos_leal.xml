@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".Puntos_Leal">
+    tools:context=".Puntos_LealFragment">
 
     <ImageView
         android:id="@+id/imvLeal"
