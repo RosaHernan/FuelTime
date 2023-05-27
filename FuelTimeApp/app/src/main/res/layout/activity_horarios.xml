@@ -70,7 +70,8 @@
                     android:layout_height="127dp"
                     app:layout_constraintStart_toStartOf="parent"
                     app:srcCompat="@drawable/texaco"
-                    tools:layout_editor_absoluteY="-1dp" />
+                    tools:layout_editor_absoluteY="-1dp"
+                    tools:ignore="MissingConstraints" />
 
                 <TextView
                     android:id="@+id/tvTexaco"
@@ -163,13 +164,15 @@
                 android:layout_height="128dp"
                 android:background="#EFF4BE"
                 tools:layout_editor_absoluteX="15dp"
-                tools:layout_editor_absoluteY="216dp">
+                tools:layout_editor_absoluteY="216dp"
+                tools:ignore="MissingConstraints">
 
                 <ImageView
                     android:id="@+id/imageView3"
                     android:layout_width="83dp"
                     android:layout_height="128dp"
-                    app:srcCompat="@drawable/uno" />
+                    app:srcCompat="@drawable/uno"
+                    android:contentDescription="TODO" />
 
                 <TextView
                     android:id="@+id/tvUno"
@@ -252,13 +255,15 @@
                 android:layout_height="136dp"
                 android:background="#EFF4BE"
                 tools:layout_editor_absoluteX="16dp"
-                tools:layout_editor_absoluteY="359dp">
+                tools:layout_editor_absoluteY="359dp"
+                tools:ignore="MissingConstraints">
 
                 <ImageView
                     android:id="@+id/imageView4"
                     android:layout_width="86dp"
                     android:layout_height="136dp"
-                    app:srcCompat="@drawable/puma" />
+                    app:srcCompat="@drawable/puma"
+                    tools:ignore="ContentDescription" />
 
                 <TextView
                     android:id="@+id/tvPuma"
@@ -338,13 +343,15 @@
                 android:layout_height="136dp"
                 android:background="#EFF4BE"
                 tools:layout_editor_absoluteX="19dp"
-                tools:layout_editor_absoluteY="517dp">
+                tools:layout_editor_absoluteY="517dp"
+                tools:ignore="MissingConstraints">
 
                 <ImageView
                     android:id="@+id/imageView6"
                     android:layout_width="95dp"
                     android:layout_height="139dp"
-                    app:srcCompat="@drawable/dlc" />
+                    app:srcCompat="@drawable/dlc"
+                    tools:ignore="ContentDescription" />
 
                 <TextView
                     android:id="@+id/tvAtenciondlc"

@@ -1,0 +1,30 @@
+package sv.edu.utec.fueltimeapp;
+
+import androidx.appcompat.app.AppCompatActivity;
+
+import android.app.Fragment;
+import android.os.Bundle;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+
+public class InicioFragment extends Fragment {
+    public InicioFragment(){
+
+    }
+
+    public void onCreate(Bundle savedInstanceState){
+        super.onCreate(savedInstanceState);
+        AppCompatActivity appCompatActivity = new AppCompatActivity();
+
+    }
+
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState){
+
+        View view = inflater.inflate(R.layout.activity_inicio, container, false);
+
+        return view;
+
+    }
+
+}

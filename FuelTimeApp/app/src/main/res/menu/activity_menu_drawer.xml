@@ -10,11 +10,11 @@
             android:icon="@drawable/inicio"
             android:title="@string/menu_home" />
         <item
-            android:id="@+id/nav_gallery"
+            android:id="@+id/nav_horario"
             android:icon="@drawable/horario"
             android:title="@string/menu_gallery" />
         <item
-            android:id="@+id/nav_slideshow"
+            android:id="@+id/nav_leal"
             android:icon="@drawable/leal"
             android:title="@string/menu_slideshow" />
         <item
