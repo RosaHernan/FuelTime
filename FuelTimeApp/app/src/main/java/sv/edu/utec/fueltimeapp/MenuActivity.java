@@ -1,65 +1,80 @@
 package sv.edu.utec.fueltimeapp;
 
+import android.annotation.SuppressLint;
+import android.app.FragmentManager;
 import android.os.Bundle;
-import android.view.View;
-import android.view.Menu;
+import android.view.MenuItem;
+import android.widget.Toast;
+import android.widget.Toolbar;
 
-import com.google.android.material.snackbar.Snackbar;
+import androidx.appcompat.app.ActionBarDrawerToggle;
+import androidx.core.view.GravityCompat;
+import androidx.drawerlayout.widget.DrawerLayout;
+import androidx.fragment.app.FragmentTransaction;
+
 import com.google.android.material.navigation.NavigationView;
 
-import androidx.navigation.NavController;
-import androidx.navigation.Navigation;
-import androidx.navigation.ui.AppBarConfiguration;
-import androidx.navigation.ui.NavigationUI;
-import androidx.drawerlayout.widget.DrawerLayout;
-import androidx.appcompat.app.AppCompatActivity;
+public class MenuFragment extends MainActivity {
 
-import sv.edu.utec.fueltimeapp.databinding.ActivityMenuBinding;
+    DrawerLayout drwLayout;
+    Toolbar tlBarra;
+    NavigationView navView;
 
-public class MenuActivity extends AppCompatActivity {
-
-    private AppBarConfiguration mAppBarConfiguration;
-    private ActivityMenuBinding binding;
-
+    @SuppressLint("MissingInflatedId")
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_menu);
 
-        binding = ActivityMenuBinding.inflate(getLayoutInflater());
-        setContentView(binding.getRoot());
+        tlBarra = findViewById(R.id.toolbar);
+        drwLayout = findViewById(R.id.drawerLayout);
+        navView = findViewById(R.id.nav_view);
 
-        setSupportActionBar(binding.appBarMenu.toolbar);
-        binding.appBarMenu.fab.setOnClickListener(new View.OnClickListener() {
+        ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(this,drwLayout,tlBarra,R.string.navigation_drawer_open,R.string.navigation_drawer_close);
+        drwLayout.addDrawerListener(toggle);
+        toggle.syncState();
+        toggle.getDrawerArrowDrawable().setColor(getResources().getColor(R.color.white,null));
+
+        navView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
             @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
+            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+
+                switch (item.getItemId()){
+
+                    case R.id.nav_home:
+                        drwLayout.closeDrawer(GravityCompat.START);
+                        Toast.makeText(getApplicationContext(),"Inicio",Toast.LENGTH_SHORT).show();
+                        fragmentosR(new InicioFragment());
+                        break;
+                    case R.id.nav_horario:
+                        drwLayout.closeDrawer(GravityCompat.START);
+                        Toast.makeText(getApplicationContext(),"Horarios",Toast.LENGTH_SHORT).show();
+                        fragmentosR(new HorariosFragment());
+                        break;
+                    case R.id.nav_leal:
+                        drwLayout.closeDrawer(GravityCompat.START);
+                        Toast.makeText(getApplicationContext(),"Horarios", Toast.LENGTH_SHORT).show();
+                        fragmentosR(new Puntos_LealFragment());
+                        break;
+                    case R.id.nav_perfil:
+                        drwLayout.closeDrawer(GravityCompat.START);
+                        Toast.makeText(getApplicationContext(),"Horarios",Toast.LENGTH_SHORT).show();
+                        fragmentosR(new PerfilFragment());
+                        break;
+                }
+
+                return true;
             }
         });
-        DrawerLayout drawer = binding.drawerLayout;
-        NavigationView navigationView = binding.navView;
-        // Passing each menu ID as a set of Ids because each
-        // menu should be considered as top level destinations.
-        mAppBarConfiguration = new AppBarConfiguration.Builder(
-                R.id.nav_home, R.id.nav_gallery, R.id.nav_slideshow)
-                .setOpenableLayout(drawer)
-                .build();
-        NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment_content_menu);
-        NavigationUI.setupActionBarWithNavController(this, navController, mAppBarConfiguration);
-        NavigationUI.setupWithNavController(navigationView, navController);
+
     }
 
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu, menu);
-        return true;
+    private void fragmentosR(Fragment fragment){
+        FragmentManager fragmentManager = getFragmentManager();
+        FragmentTransaction fragmentTransaction= fragmentManager.beginTransaction();
+        fragmentTransaction.replace(R.id.frmLayoutContainer,fragment);
+        fragmentTransaction.commit();
+
     }
 
-    @Override
-    public boolean onSupportNavigateUp() {
-        NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment_content_menu);
-        return NavigationUI.navigateUp(navController, mAppBarConfiguration)
-                || super.onSupportNavigateUp();
-    }
 }
