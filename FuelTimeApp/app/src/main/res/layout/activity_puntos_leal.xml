@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#F8F8F8"
     android:orientation="vertical"
     tools:context=".Puntos_LealFragment">
 
@@ -48,25 +49,26 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="44dp"
-        android:layout_marginTop="121dp"
+        android:layout_marginTop="20dp"
         android:layout_marginRight="49dp"
         android:text="Puntos:  300 puntos"
         android:textColor="#201DB6"
         android:textSize="24sp"
-        android:textStyle="bold" />
+        android:textStyle="bold"
+        android:visibility="invisible" />
 
-    <TextView
-        android:id="@+id/tvInfoPuntosLeal2"
+    <EditText
+        android:id="@+id/edtUsuarioLeal"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="31dp"
-        android:layout_marginTop="67dp"
-        android:layout_marginRight="37dp"
-        android:text="Más Información a Mostrar Aquí"
-        android:textAlignment="center"
-        android:textColor="#201DB6"
-        android:textSize="24sp"
-        android:textStyle="bold" />
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="121dp"
+        android:layout_marginRight="30dp"
+        android:ems="10"
+        android:hint="Ingresar Usuario"
+        android:inputType="textEmailAddress"
+        android:textColor="#040404"
+        android:visibility="visible" />
 
     <Button
         android:id="@+id/btnConectarLeal"

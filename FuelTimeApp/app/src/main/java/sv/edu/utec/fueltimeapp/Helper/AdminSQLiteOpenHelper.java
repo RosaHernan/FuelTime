@@ -25,7 +25,7 @@ public class AdminSQLiteOpenHelper extends SQLiteOpenHelper {
                 ",id_gasolinera integer, hora_abierto text, hora_cierre text, dias_apertura text, fecha_creacion text, fecha_modificacion text)");
         //Tabla Leal
         db.execSQL("CREATE TABLE Leal (id_Leal integer primary key autoincrement" +
-                ",id_usuario integer, id_gasolinera integer, puntos integer, fecha_creacion text, fecha_modificacion text)");
+                ",id_usuario integer, nombre_gasolinera text, puntos integer, fecha_creacion text, fecha_modificacion text)");
 
     }
 
