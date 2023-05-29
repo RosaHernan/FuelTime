@@ -8,8 +8,11 @@ import androidx.drawerlayout.widget.DrawerLayout;
 import android.annotation.SuppressLint;
 
 import android.app.Fragment;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
 import android.widget.Toast;
 
 import androidx.appcompat.widget.Toolbar;
@@ -23,7 +26,7 @@ public class MenuActivity extends MainActivity {
     DrawerLayout drwLayout;
     Toolbar tlBarra;
     NavigationView navView;
-
+    Button btnIniciarSesion;
     @Override
     protected void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
@@ -32,6 +35,7 @@ public class MenuActivity extends MainActivity {
         tlBarra = findViewById(R.id.toolbar);
         drwLayout = findViewById(R.id.drawerLayout);
         navView = findViewById(R.id.navigator);
+        btnIniciarSesion=findViewById(R.id.btnInicioSesion);
 
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(this,drwLayout,tlBarra,R.string.navigation_drawer_open,R.string.navigation_drawer_close);
         drwLayout.addDrawerListener(toggle);
@@ -70,6 +74,13 @@ public class MenuActivity extends MainActivity {
             }
         });
 
+        btnIniciarSesion.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                drwLayout.closeDrawer(GravityCompat.START);
+                fragmentosR(new InicioSesionFragment());
+            }
+        });
     }
     @SuppressLint("CommitTransaction")
     private void fragmentosR(Fragment fragment){
