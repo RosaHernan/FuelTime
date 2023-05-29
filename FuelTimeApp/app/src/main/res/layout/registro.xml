@@ -2,12 +2,14 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/b"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_marginStart="24dp"
-    android:layout_marginTop="16dp"
-    android:layout_marginEnd="24dp"
-    android:layout_marginBottom="16dp">
+    android:layout_marginStart="0dp"
+    android:layout_marginTop="0dp"
+    android:layout_marginEnd="0dp"
+    android:layout_marginBottom="0dp"
+    android:background="@color/white">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -39,13 +41,14 @@
             app:layout_constraintVertical_bias="0.223" />
 
         <EditText
-            android:id="@+id/editTextTextPersonName"
+            android:id="@+id/edtNOMBRES"
             android:layout_width="303dp"
             android:layout_height="51dp"
             android:backgroundTint="#FAF4F4"
             android:ems="10"
             android:hint="Nombres"
             android:inputType="textPersonName"
+            android:textColor="@color/black"
             android:textColorHint="#D2D2D2"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -70,13 +73,14 @@
             app:layout_constraintVertical_bias="0.355" />
 
         <EditText
-            android:id="@+id/editTextTextPersonName2"
+            android:id="@+id/edtAPELLIDOS"
             android:layout_width="300dp"
             android:layout_height="48dp"
             android:backgroundTint="#F8F5F5"
             android:ems="10"
             android:hint="Apellidos"
             android:inputType="textPersonName"
+            android:textColor="@color/black"
             android:textColorHint="#D2D2D2"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -113,13 +117,14 @@
             app:layout_constraintVertical_bias="0.619" />
 
         <EditText
-            android:id="@+id/editTextTextPassword"
+            android:id="@+id/edtCONTRASENA"
             android:layout_width="300dp"
             android:layout_height="48dp"
             android:backgroundTint="#FFFEFE"
             android:ems="10"
             android:hint="Contraseña"
             android:inputType="textPassword"
+            android:textColor="@color/black"
             android:textColorHint="#D2D2D2"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -129,13 +134,14 @@
             app:layout_constraintVertical_bias="0.675" />
 
         <EditText
-            android:id="@+id/editTextTextEmailAddress"
+            android:id="@+id/edtUSER"
             android:layout_width="300dp"
             android:layout_height="48dp"
             android:backgroundTint="#FFFFFF"
             android:ems="10"
             android:hint="Correo/Usuario"
             android:inputType="textEmailAddress"
+            android:textColor="@color/black"
             android:textColorHint="#D2D2D2"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -157,25 +163,28 @@
             app:layout_constraintVertical_bias="0.803">
 
             <RadioButton
-                android:id="@+id/radioButton"
+                android:id="@+id/rdbGeneroM"
                 android:layout_width="30dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Masculino" />
+                android:text="Masculino"
+                android:textColor="@color/black" />
 
             <RadioButton
-                android:id="@+id/radioButton2"
+                android:id="@+id/rdbGeneroF"
                 android:layout_width="50dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Femenino" />
+                android:text="Femenino"
+                android:textColor="@color/black" />
 
             <RadioButton
-                android:id="@+id/radioButton3"
+                android:id="@+id/rdbGeneroOT"
                 android:layout_width="10dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Otro" />
+                android:text="Otro"
+                android:textColor="@color/black" />
         </RadioGroup>
 
         <TextView
@@ -196,6 +205,7 @@
             android:layout_width="300dp"
             android:layout_height="40dp"
             android:text="Aceptar Terminos y Condiciones"
+            android:textColor="@color/black"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.195"
@@ -204,7 +214,7 @@
             app:layout_constraintVertical_bias="0.882" />
 
         <Button
-            android:id="@+id/button"
+            android:id="@+id/btnRegistro"
             android:layout_width="231dp"
             android:layout_height="49dp"
             android:backgroundTint="#F4434C"
