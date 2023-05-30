@@ -22,4 +22,9 @@
     <style name="Theme.FuelTimeApp.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
 
     <style name="Theme.FuelTimeApp.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <style name="SplashScreen" parent="Theme.FuelTimeApp">
+        <item name="android:windowBackground">@drawable/splash_screen</item>
+    </style>
+
 </resources>

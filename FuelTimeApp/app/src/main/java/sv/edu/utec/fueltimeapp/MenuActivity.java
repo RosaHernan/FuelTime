@@ -12,7 +12,10 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.ImageView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.appcompat.widget.Toolbar;
@@ -21,21 +24,32 @@ import android.app.FragmentTransaction;
 
 import com.google.android.material.navigation.NavigationView;
 
+import java.util.zip.Inflater;
+
 public class MenuActivity extends MainActivity {
 
     DrawerLayout drwLayout;
     Toolbar tlBarra;
     NavigationView navView;
-    Button btnIniciarSesion;
+    Button btnIniciarSesion, btnSalir;
+
     @Override
     protected void onCreate(Bundle savedInstanceState){
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_menu);
+        try {
+            Thread.sleep(2000);
+            setTheme(R.style.Theme_FuelTimeApp);
+            super.onCreate(savedInstanceState);
+            setContentView(R.layout.activity_menu);
+            fragmentosR(new InicioFragment());
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
 
         tlBarra = findViewById(R.id.toolbar);
         drwLayout = findViewById(R.id.drawerLayout);
         navView = findViewById(R.id.navigator);
         btnIniciarSesion=findViewById(R.id.btnInicioSesion);
+        btnSalir = findViewById(R.id.btnSalir);
 
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(this,drwLayout,tlBarra,R.string.navigation_drawer_open,R.string.navigation_drawer_close);
         drwLayout.addDrawerListener(toggle);
@@ -79,6 +93,13 @@ public class MenuActivity extends MainActivity {
             public void onClick(View view) {
                 drwLayout.closeDrawer(GravityCompat.START);
                 fragmentosR(new InicioSesionFragment());
+            }
+        });
+
+        btnSalir.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                finish();
             }
         });
     }
