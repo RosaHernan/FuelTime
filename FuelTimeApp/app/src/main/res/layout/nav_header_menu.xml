@@ -22,7 +22,7 @@
             android:id="@+id/imvRegresar"
             android:layout_width="25dp"
             android:layout_height="25dp"
-            app:srcCompat="@drawable/atras" />
+            android:src="@drawable/atras" />
 
         <TextView
             android:id="@+id/tvRegresar"
@@ -42,7 +42,7 @@
         android:layout_gravity="center|center_vertical"
         android:contentDescription="@string/nav_header_desc"
         android:paddingTop="@dimen/nav_header_vertical_spacing"
-        app:srcCompat="@drawable/perfil" />
+        android:src="@drawable/perfil"/>
 
     <TextView
         android:id="@+id/tvUsuario"
