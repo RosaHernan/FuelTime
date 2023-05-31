@@ -26,28 +26,34 @@
                 android:id="@+id/ivMenu"
                 android:layout_width="52dp"
                 android:layout_height="47dp"
-                app:srcCompat="@drawable/menu_black"
-                tools:layout_editor_absoluteX="305dp"
-                tools:layout_editor_absoluteY="35dp" />
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.948"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/menu_black" />
 
             <ImageView
                 android:id="@+id/ivUser"
                 android:layout_width="114dp"
                 android:layout_height="93dp"
-                app:srcCompat="@drawable/perfil"
-                tools:layout_editor_absoluteX="46dp"
-                tools:layout_editor_absoluteY="97dp" />
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.236"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/ivMenu"
+                app:srcCompat="@drawable/perfil" />
 
             <TextView
-                android:id="@+id/textView6"
+                android:id="@+id/tvUsers"
                 android:layout_width="117dp"
                 android:layout_height="64dp"
                 android:text="Juan Ernesto"
                 android:textColor="#0450A2"
                 android:textSize="24sp"
                 android:textStyle="bold"
-                tools:layout_editor_absoluteX="187dp"
-                tools:layout_editor_absoluteY="126dp" />
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.931"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/ivUser" />
 
             <Button
                 android:id="@+id/button"
@@ -62,15 +68,14 @@
 
             <TextView
                 android:id="@+id/tvNombre"
-                android:layout_width="59dp"
-                android:layout_height="27dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:text="Nombres"
                 android:textColor="#172573"
                 android:textStyle="bold"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.147"
                 app:layout_constraintStart_toStartOf="parent"
-                tools:layout_editor_absoluteY="279dp" />
+                app:layout_constraintTop_toBottomOf="@+id/button" />
 
             <EditText
                 android:id="@+id/edtNombres"
@@ -80,9 +85,8 @@
                 android:hint="Nombres"
                 android:inputType="textPersonName"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.79"
                 app:layout_constraintStart_toStartOf="parent"
-                tools:layout_editor_absoluteY="280dp" />
+                app:layout_constraintTop_toBottomOf="@+id/tvNombre" />
 
             <TextView
                 android:id="@+id/tvApellidos"
@@ -93,9 +97,8 @@
                 android:textColor="#172573"
                 android:textStyle="bold"
                 app:layout_constraintEnd_toEndOf="@+id/tvNombre"
-                app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="@+id/tvNombre"
-                app:layout_constraintTop_toBottomOf="@+id/tvNombre" />
+                app:layout_constraintTop_toBottomOf="@+id/edtNombres" />
 
             <EditText
                 android:id="@+id/edtApellidos"
@@ -106,7 +109,7 @@
                 android:inputType="textPersonName"
                 app:layout_constraintEnd_toEndOf="@+id/edtNombres"
                 app:layout_constraintStart_toStartOf="@+id/edtNombres"
-                tools:layout_editor_absoluteY="321dp" />
+                app:layout_constraintTop_toBottomOf="@+id/tvApellidos" />
 
             <TextView
                 android:id="@+id/tvUser"
@@ -117,9 +120,8 @@
                 android:textColor="#172573"
                 android:textStyle="bold"
                 app:layout_constraintEnd_toEndOf="@+id/tvApellidos"
-                app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="@+id/tvApellidos"
-                app:layout_constraintTop_toBottomOf="@+id/tvApellidos" />
+                app:layout_constraintTop_toBottomOf="@+id/edtApellidos" />
 
             <EditText
                 android:id="@+id/edtUser"
@@ -130,20 +132,22 @@
                 android:inputType="textEmailAddress"
                 app:layout_constraintEnd_toEndOf="@+id/edtApellidos"
                 app:layout_constraintStart_toStartOf="@+id/edtApellidos"
-                tools:layout_editor_absoluteY="362dp" />
+                app:layout_constraintTop_toBottomOf="@+id/tvUser" />
 
             <TextView
                 android:id="@+id/tvMasInfo"
                 android:layout_width="216dp"
                 android:layout_height="32dp"
+                android:layout_marginTop="28dp"
                 android:text="Más información aqui"
                 android:textAlignment="center"
                 android:textColor="#172573"
                 android:textSize="20sp"
                 android:textStyle="bold"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                tools:layout_editor_absoluteY="428dp" />
+                app:layout_constraintEnd_toEndOf="@+id/edtUser"
+                app:layout_constraintHorizontal_bias="0.428"
+                app:layout_constraintStart_toStartOf="@+id/edtUser"
+                app:layout_constraintTop_toBottomOf="@+id/edtUser" />
 
             <Button
                 android:id="@+id/btnActualizaDatos"
@@ -155,7 +159,6 @@
                 android:text="Actualizar Datos"
                 android:textAllCaps="false"
                 app:layout_constraintEnd_toEndOf="@+id/tvMasInfo"
-                app:layout_constraintHorizontal_bias="1.0"
                 app:layout_constraintStart_toStartOf="@+id/tvMasInfo"
                 app:layout_constraintTop_toBottomOf="@+id/tvMasInfo" />
 
@@ -168,7 +171,6 @@
                 android:text="Cerrar Sesión"
                 android:textAllCaps="false"
                 app:layout_constraintEnd_toEndOf="@+id/btnActualizaDatos"
-                app:layout_constraintHorizontal_bias="0.491"
                 app:layout_constraintStart_toStartOf="@+id/btnActualizaDatos"
                 app:layout_constraintTop_toBottomOf="@+id/btnActualizaDatos" />
         </androidx.constraintlayout.widget.ConstraintLayout>
